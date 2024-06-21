@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: aldolareskubenextjs 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aldolareskubenextjs
+  template:
+    metadata:
+      labels:
+        app: aldolareskubenextjs 
+    spec:
+      containers:
+        - name: aldolareskubenextjs 
+          image: msacrlares.azurecr.io/aldolareskubenextjs
+          ports:
+          - containerPort: 3000
